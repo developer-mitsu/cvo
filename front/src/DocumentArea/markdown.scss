@@ -1,0 +1,105 @@
+body {
+    color: #212121
+}
+
+pre {
+    padding: 1.5em;
+    padding-top: 0;
+    line-height: 1.5;
+    background-color: gray;
+    display: block;
+    background-color: #f9f9f9;
+
+}
+
+h1, h2, h3, h4, h5, h6, ul {
+    margin: 1.5em 0;
+}
+
+h2 {
+    font-size: 1.2em;
+}
+
+h3 {
+    color: #d1d1d1;
+    font-size: 1em;
+    &::before {
+        content: "";
+        border-left: 3px solid #d1d1d1;
+        padding-left: 0.5em;
+    }
+}
+
+@font-face {
+    font-family: 'richy';
+    src: '../fonts/RictyDiminishedDiscord-Regular.ttf'
+
+}
+pre > code {
+    font-family: "richy", "Sans Mono", "Consolas", "Courier", monospace;
+}
+
+pre, code {
+    white-space: pre;
+    overflow-x: scroll;
+}
+.hljs {
+    display: inline-block;
+    overflow-x: scroll;
+    padding: 0.5em;
+    padding-right: 100%;
+    background: #002b36;
+    color: #839496;
+    -webkit-text-size-adjust: none;
+}
+
+pre{
+    background-color: #F7F7F6;
+    position: relative;
+    z-index: 0;
+    margin-top: 0; 
+}
+.filename{
+    display: inline-block;
+    padding: 0 .25em;
+    background: rgba(0,0,0,0.07);
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 1.4;
+    font-family: "richy", "Sans Mono", "Consolas", "Courier", monospace;
+}
+pre .filename+ *{
+    display: block;
+}
+
+.copyBtn {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    z-index: 2;
+    top: 0.25em;
+    right: 0;
+    outline: none;
+}
+
+.copyBtn:hover {
+    color: #969696;
+    cursor: pointer;
+}
+
+.copyBtn:active {
+    transform: scale(0.8);
+
+}
+
+.code-header {
+    width: 100%;
+    height: 1.5em;
+    background-color: #F7F7F6;
+    position: relative;
+}
+
+img {
+    max-width: 100%;
+}

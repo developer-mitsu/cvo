@@ -1,0 +1,29 @@
+cimport React from 'react'
+import styled from 'styled-components'
+
+import { ChangeKeyword } from '../actions/search'
+
+const Input = styled.input`
+    width: 20%;
+    height: 50px;
+    border: none;
+    padding: 0 10px;
+    font-size: 10px;
+    outline: none;
+
+    box-sizing: border-box;
+`
+
+export default class DocumentSearch extends React.Component {
+    
+    render() {
+
+        return (
+            <Input placeholder="入力して検索" onChange={(e)=> this.ChangeKeyword(e.value)}></Input>
+        )
+    }
+
+    ChangeKeyword(keyword) {
+        dispatch(ChangeKeyword(keyword))
+    }
+}
